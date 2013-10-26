@@ -26,7 +26,6 @@
 		C93A2C8C181B6B8400AC8EFC /* ConferenceAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C8B181B6B8400AC8EFC /* ConferenceAppTests.m */; };
 		C93A2C98181B6CB000AC8EFC /* BCEESession.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C97181B6CB000AC8EFC /* BCEESession.m */; };
 		C93A2C9C181B78E200AC8EFC /* BCEESurvey.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C9B181B78E200AC8EFC /* BCEESurvey.m */; };
-		C93A2C9F181B792200AC8EFC /* BCEESurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C9E181B792200AC8EFC /* BCEESurveyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +67,6 @@
 		C93A2C97181B6CB000AC8EFC /* BCEESession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCEESession.m; path = Model/BCEESession.m; sourceTree = "<group>"; };
 		C93A2C9A181B78E200AC8EFC /* BCEESurvey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCEESurvey.h; path = Model/BCEESurvey.h; sourceTree = "<group>"; };
 		C93A2C9B181B78E200AC8EFC /* BCEESurvey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCEESurvey.m; path = Model/BCEESurvey.m; sourceTree = "<group>"; };
-		C93A2C9D181B792200AC8EFC /* BCEESurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCEESurveyViewController.h; path = View/BCEESurveyViewController.h; sourceTree = "<group>"; };
-		C93A2C9E181B792200AC8EFC /* BCEESurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCEESurveyViewController.m; path = View/BCEESurveyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +187,8 @@
 				C93A2C73181B6B8300AC8EFC /* BCEEMasterViewController.m */,
 				C93A2C75181B6B8300AC8EFC /* BCEEDetailViewController.h */,
 				C93A2C76181B6B8300AC8EFC /* BCEEDetailViewController.m */,
-				C93A2C9D181B792200AC8EFC /* BCEESurveyViewController.h */,
-				C93A2C9E181B792200AC8EFC /* BCEESurveyViewController.m */,
+				A5F055EB181C237900B2166F /* BCEESurveyViewController.h */,
+				A5F055EC181C237900B2166F /* BCEESurveyViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
