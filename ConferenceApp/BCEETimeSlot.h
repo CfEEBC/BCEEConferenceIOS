@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BCEESession.h"
 
 @interface BCEETimeSlot : NSObject
 
@@ -15,5 +16,7 @@
 
 - (id)initTimeSlot:(NSString *)timeSlot
       withSessions:(NSMutableArray *) sessions;
+
+- (void)addSession:(BCEESession *)session;
 
 @end

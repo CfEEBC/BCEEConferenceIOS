@@ -20,4 +20,10 @@
     return self;
 }
 
+- (void)addSession:(BCEESession *)session
+{
+    [_sessions addObject: session];
+}
+
+
 @end

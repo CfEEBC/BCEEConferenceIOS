@@ -11,8 +11,6 @@
 #import "BCEETimeSlot.h"
 
 @interface BCEEMasterViewController () {
-    NSMutableArray *_sessions;
-    NSMutableArray *_sessionGroups;
     NSMutableArray *_timeSlots;
 }
 @end
@@ -40,18 +38,18 @@
     
     self.detailViewController = (BCEEDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
-    _sessions = [[NSMutableArray alloc] initWithObjects:@(1), @(3), @"Hello", nil];
-    
     // Create Test Session Groups
-    _sessionGroups = [[NSMutableArray alloc] init];
-    NSMutableArray *session1 = [[NSMutableArray alloc] initWithObjects:@"Session1", @"Session2", @"Session3", nil];
-    BCEETimeSlot *timeSlot1 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 1" withSessions:session1];
-    NSMutableArray *session2 = [[NSMutableArray alloc] initWithObjects:@"Session4", @"Session5", nil];
-    BCEETimeSlot *timeSlot2 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 2" withSessions:session2];
+    BCEESession *session1 = [[BCEESession alloc] initWithName:@"Session A" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
+    BCEESession *session2 = [[BCEESession alloc] initWithName:@"Session B" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
+    BCEESession *session3 = [[BCEESession alloc] initWithName:@"Session C" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
+    BCEESession *session4 = [[BCEESession alloc] initWithName:@"Session D" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
+    BCEETimeSlot *timeSlot1 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 1" withSessions:[[NSMutableArray alloc] initWithObjects:session1, session2, nil]];
+    BCEETimeSlot *timeSlot2 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 2" withSessions:[[NSMutableArray alloc] initWithObjects:session3, nil]];
     _timeSlots = [[NSMutableArray alloc] initWithObjects:timeSlot1, timeSlot2, nil];
+    
+    // Testing Adding sessions with TimeSlot
+    [timeSlot2 addSession:session4];
 
-    _sessionGroups[0] = session1;
-    _sessionGroups[1] = session2;
 }
 
 //- (void)viewWillAppear:(BOOL)animated
@@ -80,37 +78,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
-{
-    if (!_sessions) {
-        _sessions = [[NSMutableArray alloc] init];
-    }
-    [_sessions insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+//- (void)insertNewObject:(id)sender
+//{
+//    if (!_sessions) {
+//        _sessions = [[NSMutableArray alloc] init];
+//    }
+//    [_sessions insertObject:[NSDate date] atIndex:0];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//}
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [_sessionGroups count];
+    return [_timeSlots count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_sessionGroups[section] count];
+    return [[_timeSlots[section] sessions] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    //NSDate *object = _sessions[indexPath.row];
-    //cell.textLabel.text = [object description];
     
-    //NSString *sessionName = _sessionGroups[indexPath.section][indexPath.row];
-    NSString *sessionName = [_timeSlots[indexPath.section] sessions][indexPath.row];
+    BCEESession *session = [_timeSlots[indexPath.section] sessions][indexPath.row];
+    NSString *sessionName = [session name];
     cell.textLabel.text = sessionName;
 
     return cell;
@@ -122,15 +117,15 @@
     return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_sessions removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [_sessions removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//    }
+//}
 
 /*
 // Override to support rearranging the table view.
@@ -154,8 +149,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        //NSDate *object = _sessions[indexPath.row];
-        NSString *sessionName = [_timeSlots[indexPath.section] sessions][indexPath.row];
+        
+        BCEESession *session = [_timeSlots[indexPath.section] sessions][indexPath.row];
+        NSString *sessionName = [session name];
         self.detailViewController.detailItem = sessionName;
         
     }
@@ -165,8 +161,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _sessions[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        BCEESession *session = [_timeSlots[indexPath.section] sessions][indexPath.row];
+        [[segue destinationViewController] setDetailItem:session];
     }
 }
 
