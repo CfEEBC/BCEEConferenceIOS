@@ -5,16 +5,26 @@
 //  Created by Arianne Dee on 2013-10-25.
 //  Copyright (c) 2013 Arianne Dee. All rights reserved.
 //
+//
 
 #import "BCEEDetailViewController.h"
 #import "BCEESession.h"
 
 @interface BCEEDetailViewController ()
+
+@property (nonatomic, strong) NSMutableData * responseData;
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
 @implementation BCEEDetailViewController
+
+
+@synthesize responseData = _responseData;
+
+
+
 
 #pragma mark - Managing the detail item
 
@@ -28,42 +38,95 @@
         // Update the view.
         [self configureView];
     }
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
+    
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
     
-    // PUT PARSED INFO HERE:
-    parsedName = @"$SESSION";
-    parsedLocation = @"$LOCATION";
-    parsedStartTime = @"$STIME";
-    parsedEndTime = @"$ETIME";
-    parsedBio = @"$BIO";
+    self.responseData = [NSMutableData data];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://bceeconference.appspot.com/machine"]];
+    NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [conn start];
     
-    [_lbl_location setText:parsedLocation];
-    [_lbl_sessionName setText:parsedName];
-    [_lbl_startTime setText:parsedStartTime];
-    [_lbl_endtime setText:parsedEndTime];
-    [_desc_bio setText:parsedBio];
+    // PUT PARSED INFO HERE:
+    //parsedName = @"$SESSION";
+    //parsedLocation = @"$LOCATION";
+    //parsedStartTime = @"$STIME";
+    //parsedEndTime = @"$ETIME";
+    //parsedBio = @"$BIO";
+    
+//    [_lbl_location setText:parsedLocation];
+//    [_lbl_sessionName setText:parsedName];
+//    [_lbl_startTime setText:parsedStartTime];
+//    [_lbl_endtime setText:parsedEndTime];
+//    [_desc_bio setText:parsedBio];
     
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.responseData appendData:data];
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
     [self configureView];
     
+    NSLog(@"hey");
     
+}
+
+- (void) connectionDidFinishLoading:(NSURLConnection *) connection {
+    NSError * myerror = nil;
+    NSArray * res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myerror];
+    
+    for (int i = 0; i < [res count] ; i++){
+        NSDictionary * d = [res objectAtIndex:(0)];
+        for(id key in d){
+            id value = [d objectForKey:key];
+            
+            NSString *keyAsString = (NSString *) key;
+            NSString *valueAsString = (NSString *) value;
+            
+            if([keyAsString isEqualToString:@"session_name"]){
+                parsedName = valueAsString;
+            } else if([keyAsString isEqualToString:@"location"]){
+                parsedLocation = valueAsString;
+            } else if ([keyAsString isEqualToString:@"speakers"]){
+                
+            } else if([keyAsString isEqualToString:@"stime"]){
+                parsedStartTime = valueAsString;
+            } else if([keyAsString isEqualToString:@"etime"]){
+                parsedEndTime = valueAsString;
+            } else if([keyAsString isEqualToString:@"description"]){
+                
+            } else if([keyAsString isEqualToString:@"biography"]){
+                parsedBio = valueAsString;
+            } else if([keyAsString isEqualToString:@"survey_link"]){
+                urltosend = valueAsString;
+            }
+            
+            NSLog(@"===NEW SESSION===");
+            NSLog(@"Name: %@", parsedName);
+            NSLog(@"Location: %@", parsedLocation);
+            NSLog(@"StartTime: %@", parsedStartTime);
+            NSLog(@"EndTime: %@", parsedEndTime);
+            NSLog(@"Biography: %@", parsedBio);
+            NSLog(@"Survey: %@", urltosend);
+        
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
