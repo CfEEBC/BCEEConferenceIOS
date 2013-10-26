@@ -18,4 +18,12 @@
 - (id)initWithDate:(NSDate *)startTime
           location:(NSString *)location;
 
+- (void)updateSessionWithStart:(NSDate *)start
+                      location:(NSString *)loc
+                   description:(NSString *)desc
+                    andSpeaker:(NSString *)speaker1;
+- (void)test;
+
+- (void)updateSessionWithStart:(NSDate *)start;
+
 @end

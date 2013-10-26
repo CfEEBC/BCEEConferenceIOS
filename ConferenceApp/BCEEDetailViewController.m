@@ -7,6 +7,7 @@
 //
 
 #import "BCEEDetailViewController.h"
+#import "BCEESession.h"
 
 @interface BCEEDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -17,10 +18,12 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(BCEESession *)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
+        
+        //_lblName.text = newDetailItem.location;
         
         // Update the view.
         [self configureView];
@@ -62,11 +65,18 @@
     self.masterPopoverController = popoverController;
 }
 
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+- (void)splitViewController:(UISplitViewController *)splitController
+     willShowViewController:(UIViewController *)viewController
+  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
     // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }
 
+#pragma mark - IBActions
+
+- (IBAction)onSurveyButtonClicked:(id)sender {
+
+}
 @end
