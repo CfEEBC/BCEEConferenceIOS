@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5F055ED181C237900B2166F /* BCEESurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F055EC181C237900B2166F /* BCEESurveyViewController.m */; };
+		A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A559677C181C5B360055E197 /* BCEESurveyViewController.m */; };
 		B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */; };
 		C93A2C5B181B6B8300AC8EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5A181B6B8300AC8EFC /* Foundation.framework */; };
 		C93A2C5D181B6B8300AC8EFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A5F055EB181C237900B2166F /* BCEESurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEESurveyViewController.h; sourceTree = "<group>"; };
-		A5F055EC181C237900B2166F /* BCEESurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESurveyViewController.m; sourceTree = "<group>"; };
+		A559677B181C5B360055E197 /* BCEESurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEESurveyViewController.h; sourceTree = "<group>"; };
+		A559677C181C5B360055E197 /* BCEESurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESurveyViewController.m; sourceTree = "<group>"; };
 		B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEETimeSlot.h; sourceTree = "<group>"; };
 		B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEETimeSlot.m; sourceTree = "<group>"; };
 		C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,8 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F055ED181C237900B2166F /* BCEESurveyViewController.m in Sources */,
-				C93A2C9F181B792200AC8EFC /* BCEESurveyViewController.m in Sources */,
 				B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */,
 				A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */,
 				C93A2C9C181B78E200AC8EFC /* BCEESurvey.m in Sources */,
