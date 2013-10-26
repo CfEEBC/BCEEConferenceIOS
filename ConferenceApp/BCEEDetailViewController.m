@@ -9,6 +9,7 @@
 
 #import "BCEEDetailViewController.h"
 #import "BCEESession.h"
+#import "BCEETimeSlot.h"
 
 @interface BCEEDetailViewController ()
 
@@ -22,9 +23,6 @@
 
 
 @synthesize responseData = _responseData;
-
-
-
 
 #pragma mark - Managing the detail item
 
@@ -46,10 +44,21 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
     
+    // Set up date formatter
+    NSDateFormatter* df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"MM/dd/yyyy"];
+    
+    // Update the user interface for the detail item.
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
+        self.lbl_sessionName.text = [self.detailItem name];
+        self.lbl_startTime.text = [df stringFromDate:[self.detailItem startTime]];
+        self.lbl_endtime.text = [df stringFromDate:[self.detailItem endTime]];
+        self.description.text = [self.detailItem description];
+        self.lbl_location.text = [self.detailItem location];
+        self.lbl_speakerNames.text = [self.detailItem speakers];
+        self.biography.text = [self.detailItem biography];
     }
     
     self.responseData = [NSMutableData data];
@@ -157,6 +166,6 @@
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
     // MODIFY WEBSITE HERE
-    urltosend = @"http://www.google.com";
+    urltosend = [_detailItem surveyLink];
 }
 @end
