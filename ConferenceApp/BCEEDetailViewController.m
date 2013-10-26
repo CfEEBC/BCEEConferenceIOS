@@ -77,6 +77,6 @@
 #pragma mark - IBActions
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
-
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.google.com"]];
 }
 @end
