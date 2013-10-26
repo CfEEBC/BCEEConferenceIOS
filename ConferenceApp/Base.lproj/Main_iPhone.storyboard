@@ -62,32 +62,6 @@
             </objects>
             <point key="canvasLocation" x="522" y="64"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="n0e-TJ-r78">
-            <objects>
-                <viewController id="JP8-g5-b3u" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="61K-Eh-zqY"/>
-                        <viewControllerLayoutGuide type="bottom" id="iZ5-fc-P5O"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5BS-eR-Ohb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-Hl-Dix">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4SI-VL-OlA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ww9-ml-Hgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1496" y="64"/>
-        </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
             <objects>
@@ -127,14 +101,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-ER-0K1">
-                                <rect key="frame" x="93" y="489" width="135" height="30"/>
+                                <rect key="frame" x="93" y="425" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete Survey">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onSurveyButtonClicked:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="W0v-o9-Ccd"/>
-                                    <segue destination="JP8-g5-b3u" kind="push" identifier="detailToSurvey" id="KX5-CT-p10"/>
+                                    <segue destination="Iyw-C6-8DY" kind="push" id="Ix9-sv-Yd7"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Up-1l3">
@@ -152,19 +126,77 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-HS-eUW">
+                                <rect key="frame" x="150" y="108" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4I-M3-WLE">
+                                <rect key="frame" x="150" y="137" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKS-Lt-BUx">
+                                <rect key="frame" x="150" y="164" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpc-fl-HJo">
+                                <rect key="frame" x="150" y="193" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="btnSurvey" destination="zWU-ER-0K1" id="bwK-Yk-57O"/>
+                        <outlet property="desc_bio" destination="eIY-Up-1l3" id="p6U-Tj-EP7"/>
                         <outlet property="lblName" destination="CVC-o0-XRX" id="PF6-fe-yb1"/>
                         <outlet property="lblSessionName" destination="Uuc-sr-Xeq" id="Uj3-KX-yFT"/>
+                        <outlet property="lbl_endtime" destination="nKS-Lt-BUx" id="CWn-7G-bgt"/>
+                        <outlet property="lbl_location" destination="fpc-fl-HJo" id="su9-uw-bWm"/>
+                        <outlet property="lbl_sessionName" destination="7dn-HS-eUW" id="IKy-Nx-yts"/>
+                        <outlet property="lbl_startTime" destination="X4I-M3-WLE" id="48f-7g-PGz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="64"/>
+            <point key="canvasLocation" x="886" y="64"/>
+        </scene>
+        <!--Survey View Controller-->
+        <scene sceneID="Qze-Pp-iab">
+            <objects>
+                <viewController id="Iyw-C6-8DY" customClass="BCEESurveyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zS3-Ag-F3G"/>
+                        <viewControllerLayoutGuide type="bottom" id="o66-nz-2vw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HBU-aC-PVS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gI-qE-DlA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4zw-O8-srO"/>
+                    <connections>
+                        <outlet property="surveyWebView" destination="6gI-qE-DlA" id="O7M-xN-Ozm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTu-Vl-jGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="64"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -41,6 +41,20 @@
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
+    
+    // PUT PARSED INFO HERE:
+    parsedName = @"$SESSION";
+    parsedLocation = @"$LOCATION";
+    parsedStartTime = @"$STIME";
+    parsedEndTime = @"$ETIME";
+    parsedBio = @"$BIO";
+    
+    [_lbl_location setText:parsedLocation];
+    [_lbl_sessionName setText:parsedName];
+    [_lbl_startTime setText:parsedStartTime];
+    [_lbl_endtime setText:parsedEndTime];
+    [_desc_bio setText:parsedBio];
+    
 }
 
 - (void)viewDidLoad
@@ -48,6 +62,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +93,7 @@
 #pragma mark - IBActions
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.google.com"]];
+    // MODIFY WEBSITE HERE
+    urltosend = @"http://www.google.com";
 }
 @end
