@@ -17,6 +17,20 @@
 
 @implementation BCEEMasterViewController
 
+#pragma mark - Managing informations on sessions
+
+- (void)setTimeSlots:(NSMutableArray *)newTimeSlots
+{
+    if (_timeSlots != newTimeSlots) {
+        _timeSlots = newTimeSlots;
+        
+        //_lblName.text = newDetailItem.location;
+        
+        // Update the view.
+        //[self configureView];
+    }
+}
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -25,6 +39,8 @@
     }
     [super awakeFromNib];
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -39,6 +55,8 @@
     self.detailViewController = (BCEEDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     // Create Test Session Groups
+    
+    /*
     BCEESession *session1 = [[BCEESession alloc] initWithName:@"Session A" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.engadget.com/" startTime:[NSDate date] endTime:[NSDate date]];
     BCEESession *session2 = [[BCEESession alloc] initWithName:@"Session B" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.arstechnica.com/" startTime:[NSDate date] endTime:[NSDate date]];
     BCEESession *session3 = [[BCEESession alloc] initWithName:@"Session C" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
@@ -47,8 +65,10 @@
     BCEETimeSlot *timeSlot2 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 2" withSessions:[[NSMutableArray alloc] initWithObjects:session3, nil]];
     _timeSlots = [[NSMutableArray alloc] initWithObjects:timeSlot1, timeSlot2, nil];
     
+    
     // Testing Adding sessions with TimeSlot
     [timeSlot2 addSession:session4];
+    */
 
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BCEESplashViewController.h"
 
+
 NSMutableArray *timeSlots;
 
 @class BCEEDetailViewController;
@@ -16,5 +17,7 @@ NSMutableArray *timeSlots;
 @interface BCEEMasterViewController : UITableViewController
 
 @property (strong, nonatomic) BCEEDetailViewController *detailViewController;
+
+- (void)setTimeSlots:(NSMutableArray *)newTimeSlots;
 
 @end

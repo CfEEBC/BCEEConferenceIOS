@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A559677C181C5B360055E197 /* BCEESurveyViewController.m */; };
 		A5596786181C71350055E197 /* BCEESplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5596784181C71350055E197 /* BCEESplashViewController.m */; };
-		A5596787181C71350055E197 /* BCEESplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5596785181C71350055E197 /* BCEESplashViewController.xib */; };
 		A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */; };
 		A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */; };
 		B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */; };
@@ -48,7 +47,6 @@
 		A559677C181C5B360055E197 /* BCEESurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESurveyViewController.m; sourceTree = "<group>"; };
 		A5596783181C71350055E197 /* BCEESplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEESplashViewController.h; sourceTree = "<group>"; };
 		A5596784181C71350055E197 /* BCEESplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESplashViewController.m; sourceTree = "<group>"; };
-		A5596785181C71350055E197 /* BCEESplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCEESplashViewController.xib; sourceTree = "<group>"; };
 		A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BCCFEE_logo_RGB_hires.jpg; sourceTree = "<group>"; };
 		A5E731F9181CAD4700E427FD /* BCEEGeneralSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEEGeneralSurveyViewController.h; sourceTree = "<group>"; };
 		A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEGeneralSurveyViewController.m; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 			children = (
 				A5596783181C71350055E197 /* BCEESplashViewController.h */,
 				A5596784181C71350055E197 /* BCEESplashViewController.m */,
-				A5596785181C71350055E197 /* BCEESplashViewController.xib */,
 				A559677B181C5B360055E197 /* BCEESurveyViewController.h */,
 				A559677C181C5B360055E197 /* BCEESurveyViewController.m */,
 				C93A2C72181B6B8300AC8EFC /* BCEEMasterViewController.h */,
@@ -294,7 +291,6 @@
 			files = (
 				A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */,
 				C93A2C71181B6B8300AC8EFC /* Main_iPad.storyboard in Resources */,
-				A5596787181C71350055E197 /* BCEESplashViewController.xib in Resources */,
 				C93A2C79181B6B8300AC8EFC /* Images.xcassets in Resources */,
 				C93A2C6E181B6B8300AC8EFC /* Main_iPhone.storyboard in Resources */,
 				C93A2C65181B6B8300AC8EFC /* InfoPlist.strings in Resources */,

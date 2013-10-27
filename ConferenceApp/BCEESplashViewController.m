@@ -163,5 +163,12 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showTimeSlots"]) {
+        [[segue destinationViewController] setTimeSlots: timeSlots];
+    }
+}
+
 
 @end

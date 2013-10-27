@@ -19,7 +19,7 @@
             </objects>
             <point key="canvasLocation" x="-237" y="64"/>
         </scene>
-        <!--Splash View Controller-->
+        <!--Splash View Controller - Welcome-->
         <scene sceneID="JxJ-m9-Gpr">
             <objects>
                 <viewController id="SEr-rn-gtb" customClass="BCEESplashViewController" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGg-6v-bdr" kind="push" id="kmr-Vq-4S8"/>
+                                    <segue destination="pGg-6v-bdr" kind="push" identifier="showTimeSlots" id="kmr-Vq-4S8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-ax-en7">
@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="C5p-HU-69Q"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="C5p-HU-69Q"/>
                     <connections>
                         <outlet property="btn_endSurvey" destination="0l7-ax-en7" id="ObW-CZ-JDQ"/>
                         <outlet property="btn_start" destination="bVi-D2-GRR" id="HH5-z4-0rq"/>
@@ -69,24 +69,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjS-VP-MmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="220" y="64"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2BS-fR-Cjx">
-            <objects>
-                <viewController id="Oyt-uJ-Tqm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EUu-l8-Oe0"/>
-                        <viewControllerLayoutGuide type="bottom" id="1vg-y6-vNB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LkF-6X-03A">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wJ9-Sb-ZtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="224" y="773"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">
@@ -125,11 +107,11 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Agenda" id="tQt-TN-PWz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="64"/>
+            <point key="canvasLocation" x="620" y="64"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -230,7 +212,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Session Details" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="biography" destination="eIY-Up-1l3" id="M1W-Pc-4YW"/>
                         <outlet property="btnSurvey" destination="zWU-ER-0K1" id="bwK-Yk-57O"/>
@@ -246,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="1069" y="64"/>
         </scene>
-        <!--Survey View Controller-->
+        <!--Survey View Controller - Survey-->
         <scene sceneID="Qze-Pp-iab">
             <objects>
                 <viewController id="Iyw-C6-8DY" customClass="BCEESurveyViewController" sceneMemberID="viewController">
@@ -266,7 +248,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4zw-O8-srO"/>
+                    <navigationItem key="navigationItem" title="Survey" id="4zw-O8-srO"/>
                     <connections>
                         <outlet property="surveyWebView" destination="6gI-qE-DlA" id="O7M-xN-Ozm"/>
                     </connections>

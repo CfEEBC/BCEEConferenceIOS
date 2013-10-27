@@ -22,6 +22,8 @@
     NSString * stringUrl = urltosend;
     NSURL *url = [NSURL URLWithString: stringUrl];
     NSURLRequest * rObj = [NSURLRequest requestWithURL: url];
+
+    NSLog(@"The Survey URL: %@", stringUrl);
     [_surveyWebView loadRequest: rObj];
 }
 @end

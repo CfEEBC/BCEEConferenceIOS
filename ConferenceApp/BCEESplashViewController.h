@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BCEETimeSlot.h"
 #import "BCEEMasterViewController.h"
+#import "BCEEMasterViewController.h"
 
 NSMutableArray *sessionArray;
 
