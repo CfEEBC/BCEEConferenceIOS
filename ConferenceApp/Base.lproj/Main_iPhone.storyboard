@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="122" id="nUK-fy-pZG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-D2-GRR">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-D2-GRR">
                                 <rect key="frame" x="65" y="414" width="189" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -54,7 +54,7 @@
                                     <segue destination="pGg-6v-bdr" kind="push" identifier="showTimeSlots" id="kmr-Vq-4S8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-ax-en7">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-ax-en7">
                                 <rect key="frame" x="75" y="468" width="169" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -69,15 +69,29 @@
                                     <segue destination="qZV-oj-l6x" kind="push" id="lgE-t2-IzQ"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection Failed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmC-U6-ruI">
+                                <rect key="frame" x="24" y="428" width="272" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="0i3-Fk-cbt"/>
+                                    <constraint firstAttribute="height" constant="50" id="rWK-2a-WDh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mwk-Ak-3x9" firstAttribute="top" secondItem="0l7-ax-en7" secondAttribute="bottom" constant="80" id="0ag-sa-W0R"/>
+                            <constraint firstItem="mwk-Ak-3x9" firstAttribute="top" secondItem="OmC-U6-ruI" secondAttribute="bottom" constant="90" id="BFU-tS-2Qx"/>
                             <constraint firstAttribute="centerX" secondItem="0l7-ax-en7" secondAttribute="centerX" id="Ghe-oL-gBU"/>
                             <constraint firstItem="0l7-ax-en7" firstAttribute="top" secondItem="bVi-D2-GRR" secondAttribute="bottom" constant="24" id="V5U-Z2-H8M"/>
                             <constraint firstAttribute="centerX" secondItem="bVi-D2-GRR" secondAttribute="centerX" id="d6F-yJ-8I5"/>
+                            <constraint firstAttribute="trailing" secondItem="OmC-U6-ruI" secondAttribute="trailing" constant="24" id="fe8-kt-roW"/>
                             <constraint firstAttribute="trailing" secondItem="N3a-26-b3V" secondAttribute="trailing" constant="28" id="jRO-we-PdW"/>
                             <constraint firstItem="N3a-26-b3V" firstAttribute="top" secondItem="ePY-XU-3Jv" secondAttribute="bottom" constant="64" id="s8Z-5s-rAX"/>
+                            <constraint firstItem="OmC-U6-ruI" firstAttribute="leading" secondItem="6o3-LR-Pc1" secondAttribute="leading" constant="24" id="t8G-hJ-wZh"/>
                             <constraint firstItem="N3a-26-b3V" firstAttribute="leading" secondItem="6o3-LR-Pc1" secondAttribute="leading" constant="28" id="url-Kg-aEn"/>
                         </constraints>
                     </view>
@@ -86,6 +100,7 @@
                         <outlet property="btn_endSurvey" destination="0l7-ax-en7" id="ObW-CZ-JDQ"/>
                         <outlet property="btn_start" destination="bVi-D2-GRR" id="HH5-z4-0rq"/>
                         <outlet property="img_splash" destination="N3a-26-b3V" id="8dC-Ok-44t"/>
+                        <outlet property="lbl_connectionFailed" destination="OmC-U6-ruI" id="dU4-s1-r6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjS-VP-MmA" userLabel="First Responder" sceneMemberID="firstResponder"/>

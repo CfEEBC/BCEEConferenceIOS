@@ -120,6 +120,10 @@ NSString* const DATE_FORMAT = @"yyyy-MM-dd HH:mm:ss";
     }
     
     timeSlots = _sessionSchedule;
+    
+    // Unhide buttons in beginning spalsh view after parsing is done
+    [[BCEESplashViewInstance btn_start] setHidden:FALSE];
+    [[BCEESplashViewInstance btn_endSurvey] setHidden:FALSE];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -136,6 +140,8 @@ NSString* const DATE_FORMAT = @"yyyy-MM-dd HH:mm:ss";
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [message show];
+    [[BCEESplashViewInstance lbl_connectionFailed] setHidden:FALSE];
+
 
 }
 

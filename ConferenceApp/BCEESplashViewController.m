@@ -34,6 +34,8 @@
 {
     [super viewDidLoad];
 
+    BCEESplashViewInstance = self;
+    
     // Call BCEEScheduleConnectionDelegate to get session schedule
     self.responseData = [NSMutableData data];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:SESSION_INFO_URL]];
@@ -63,6 +65,11 @@
         [[segue destinationViewController] setTimeSlots: timeSlots];
     }
 }
+//
+//- (BCEESplashViewController)getInstance
+//{
+//    return instance;
+//}
 
 
 @end
