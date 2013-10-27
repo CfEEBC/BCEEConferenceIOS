@@ -30,7 +30,6 @@
 		C93A2C8A181B6B8400AC8EFC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93A2C88181B6B8400AC8EFC /* InfoPlist.strings */; };
 		C93A2C8C181B6B8400AC8EFC /* ConferenceAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C8B181B6B8400AC8EFC /* ConferenceAppTests.m */; };
 		C93A2C98181B6CB000AC8EFC /* BCEESession.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C97181B6CB000AC8EFC /* BCEESession.m */; };
-		C93A2C9C181B78E200AC8EFC /* BCEESurvey.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A2C9B181B78E200AC8EFC /* BCEESurvey.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +77,6 @@
 		C93A2C8B181B6B8400AC8EFC /* ConferenceAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConferenceAppTests.m; sourceTree = "<group>"; };
 		C93A2C96181B6CB000AC8EFC /* BCEESession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCEESession.h; path = Model/BCEESession.h; sourceTree = "<group>"; };
 		C93A2C97181B6CB000AC8EFC /* BCEESession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCEESession.m; path = Model/BCEESession.m; sourceTree = "<group>"; };
-		C93A2C9A181B78E200AC8EFC /* BCEESurvey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCEESurvey.h; path = Model/BCEESurvey.h; sourceTree = "<group>"; };
-		C93A2C9B181B78E200AC8EFC /* BCEESurvey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCEESurvey.m; path = Model/BCEESurvey.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +183,6 @@
 			children = (
 				C93A2C96181B6CB000AC8EFC /* BCEESession.h */,
 				C93A2C97181B6CB000AC8EFC /* BCEESession.m */,
-				C93A2C9A181B78E200AC8EFC /* BCEESurvey.h */,
-				C93A2C9B181B78E200AC8EFC /* BCEESurvey.m */,
 				B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */,
 				B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */,
 			);
@@ -319,7 +314,6 @@
 				B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */,
 				A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */,
 				A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */,
-				C93A2C9C181B78E200AC8EFC /* BCEESurvey.m in Sources */,
 				C93A2C67181B6B8300AC8EFC /* main.m in Sources */,
 				C93A2C74181B6B8300AC8EFC /* BCEEMasterViewController.m in Sources */,
 				C93A2C77181B6B8300AC8EFC /* BCEEDetailViewController.m in Sources */,
