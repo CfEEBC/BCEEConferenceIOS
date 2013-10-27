@@ -14,6 +14,7 @@
 		A5E73206181CD37F00E427FD /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E73203181CD37F00E427FD /* icon_big.png */; };
 		A5E73207181CD37F00E427FD /* icon_med.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E73204181CD37F00E427FD /* icon_med.png */; };
 		A5E73208181CD37F00E427FD /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E73205181CD37F00E427FD /* icon_small.png */; };
+		B631C3D4181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */; };
 		B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */; };
 		C93A2C5B181B6B8300AC8EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5A181B6B8300AC8EFC /* Foundation.framework */; };
 		C93A2C5D181B6B8300AC8EFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		A5E73203181CD37F00E427FD /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
 		A5E73204181CD37F00E427FD /* icon_med.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_med.png; sourceTree = "<group>"; };
 		A5E73205181CD37F00E427FD /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small.png; sourceTree = "<group>"; };
+		B631C3D2181DA69B004D33DA /* BCEEScheduleConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEEScheduleConnectionDelegate.h; sourceTree = "<group>"; };
+		B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEScheduleConnectionDelegate.m; sourceTree = "<group>"; };
 		B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEETimeSlot.h; sourceTree = "<group>"; };
 		B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEETimeSlot.m; sourceTree = "<group>"; };
 		C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +147,8 @@
 				C93A2C95181B6C7A00AC8EFC /* Model */,
 				C93A2C69181B6B8300AC8EFC /* BCEEAppDelegate.h */,
 				C93A2C6A181B6B8300AC8EFC /* BCEEAppDelegate.m */,
+				B631C3D2181DA69B004D33DA /* BCEEScheduleConnectionDelegate.h */,
+				B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */,
 				C93A2C6C181B6B8300AC8EFC /* Main_iPhone.storyboard */,
 				C93A2C6F181B6B8300AC8EFC /* Main_iPad.storyboard */,
 				C93A2C78181B6B8300AC8EFC /* Images.xcassets */,
@@ -327,6 +332,7 @@
 				C93A2C77181B6B8300AC8EFC /* BCEEDetailViewController.m in Sources */,
 				A5596786181C71350055E197 /* BCEESplashViewController.m in Sources */,
 				C93A2C6B181B6B8300AC8EFC /* BCEEAppDelegate.m in Sources */,
+				B631C3D4181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m in Sources */,
 				C93A2C98181B6CB000AC8EFC /* BCEESession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
