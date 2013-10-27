@@ -52,16 +52,18 @@
     NSError * myerror = nil;
     NSArray * res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myerror];
     
+    // Instantiate NSDateFormatter for parsing dates
     NSDateFormatter * df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 
-    for (int i = 0; i < [res count] ; i++){  // loop through each session
+    // loop through JSON Dictionary and convert it into a BCEESession object
+    for (int i = 0; i < [res count] ; i++){
         
         BCEESession *session = [[BCEESession alloc] init];
-        
         NSDictionary * d = [res objectAtIndex:(i)];
 
-        for(id key in d){  // loop through each key element
+        // loop through each key value in the dictionary
+        for(id key in d){
             id value = [d objectForKey:key];
             
             NSString *keyAsString = (NSString *) key;
@@ -137,6 +139,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // Pass the parsed session information to the Agenda view
     if ([[segue identifier] isEqualToString:@"showTimeSlots"]) {
         [[segue destinationViewController] setTimeSlots: timeSlots];
     }

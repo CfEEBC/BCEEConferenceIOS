@@ -48,23 +48,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.detailViewController = (BCEEDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
-    
-    // Create Test Session Groups
-    
-    /*
-    BCEESession *session1 = [[BCEESession alloc] initWithName:@"Session A" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.engadget.com/" startTime:[NSDate date] endTime:[NSDate date]];
-    BCEESession *session2 = [[BCEESession alloc] initWithName:@"Session B" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.arstechnica.com/" startTime:[NSDate date] endTime:[NSDate date]];
-    BCEESession *session3 = [[BCEESession alloc] initWithName:@"Session C" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.google.com/" startTime:[NSDate date] endTime:[NSDate date]];
-    BCEESession *session4 = [[BCEESession alloc] initWithName:@"Session D" Description:@"UBC Hackathon" Location:@"ICICS" Speakers:@"Kim, Kurt" Biography:@"They are awesome professors :)" surveyLink:@"http://www.yahoo.com/" startTime:[NSDate date] endTime:[NSDate date]];
-    BCEETimeSlot *timeSlot1 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 1" withSessions:[[NSMutableArray alloc] initWithObjects:session1, session2, nil]];
-    BCEETimeSlot *timeSlot2 = [[BCEETimeSlot alloc] initTimeSlot:@"Time Slot 2" withSessions:[[NSMutableArray alloc] initWithObjects:session3, nil]];
-    _timeSlots = [[NSMutableArray alloc] initWithObjects:timeSlot1, timeSlot2, nil];
-    
-    
-    // Testing Adding sessions with TimeSlot
-    [timeSlot2 addSession:session4];
-    */
-
 }
 
 - (void)didReceiveMemoryWarning
