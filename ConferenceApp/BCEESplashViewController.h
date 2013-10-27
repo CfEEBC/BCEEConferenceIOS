@@ -12,13 +12,13 @@
 #import "BCEEMasterViewController.h"
 
 NSMutableArray *sessionArray;
+extern NSString* const SESSION_INFO_URL;
+extern NSString* const DATE_FORMAT;
 
 @interface BCEESplashViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *img_splash;
-
 @property (strong, nonatomic) IBOutlet UIButton *btn_start;
-
 @property (strong, nonatomic) IBOutlet UIButton *btn_endSurvey;
 
 @end

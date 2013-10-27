@@ -104,13 +104,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RE2-wi-PTp">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE2-wi-PTp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RE2-wi-PTp" secondAttribute="trailing" id="31k-Eg-ESF"/>
+                            <constraint firstItem="pli-hV-hqi" firstAttribute="top" secondItem="RE2-wi-PTp" secondAttribute="bottom" id="Eqi-cg-qQJ"/>
+                            <constraint firstItem="RE2-wi-PTp" firstAttribute="leading" secondItem="Gyb-ol-3IX" secondAttribute="leading" id="QKp-AC-axg"/>
+                            <constraint firstItem="RE2-wi-PTp" firstAttribute="top" secondItem="Gyb-ol-3IX" secondAttribute="top" id="yJy-Rk-Joz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hpO-5V-aw6"/>
                     <connections>
@@ -187,7 +193,7 @@
                                     <segue destination="Iyw-C6-8DY" kind="push" id="Ix9-sv-Yd7"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="onDrag" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Up-1l3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-Up-1l3">
                                 <rect key="frame" x="20" y="370" width="280" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,7 +201,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="speakerNames" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-Fw-3la">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="speakerNames" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-Fw-3la">
                                 <rect key="frame" x="20" y="341" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -217,7 +223,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ic-bF-lfc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ic-bF-lfc">
                                 <rect key="frame" x="20" y="192" width="280" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,13 +305,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gI-qE-DlA">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gI-qE-DlA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6gI-qE-DlA" firstAttribute="top" secondItem="HBU-aC-PVS" secondAttribute="top" id="4Oz-Ns-ypn"/>
+                            <constraint firstItem="6gI-qE-DlA" firstAttribute="leading" secondItem="HBU-aC-PVS" secondAttribute="leading" id="Be5-5b-Ovq"/>
+                            <constraint firstItem="o66-nz-2vw" firstAttribute="top" secondItem="6gI-qE-DlA" secondAttribute="bottom" id="afV-iQ-c1D"/>
+                            <constraint firstAttribute="trailing" secondItem="6gI-qE-DlA" secondAttribute="trailing" id="da5-3Y-PhE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Survey" id="4zw-O8-srO"/>
                     <connections>
