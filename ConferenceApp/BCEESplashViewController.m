@@ -13,12 +13,20 @@
 @interface BCEESplashViewController ()
 
 @property (nonatomic, strong) NSMutableData * responseData;
+@property (nonatomic, strong) NSMutableData * connection;
+
 
 @end
 
 @implementation BCEESplashViewController
 
+@synthesize connection = _connection;
 @synthesize responseData = _responseData;
+
+// Constants
+NSString* const SESSION_INFO_URL = @"http://bceeconference.appspot.com/machine";
+NSString* const DATE_FORMAT = @"yyyy-MM-dd HH:mm:ss";
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +41,7 @@
     sessionArray = [[NSMutableArray alloc] init];
     
     self.responseData = [NSMutableData data];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://bceeconference.appspot.com/machine"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:SESSION_INFO_URL]];
     NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [conn start];
     
@@ -54,7 +62,7 @@
     
     // Instantiate NSDateFormatter for parsing dates
     NSDateFormatter * df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [df setDateFormat:DATE_FORMAT];
 
     // loop through JSON Dictionary and convert it into a BCEESession object
     for (int i = 0; i < [res count] ; i++){
@@ -127,6 +135,29 @@
         prevStartDate = currStartTime;
     }
 }
+
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+    // Release the connection and the data object
+    // by setting the properties (declared elsewhere)
+    // to nil.
+    _connection = nil;
+    _responseData = nil;
+    
+    // inform the user
+    NSLog(@"Connection failed! Error - %@ %@",
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Connection Error!"
+                                                      message:@"We are unable to retrieve the conference schedule. Please check your internet connection settings."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
