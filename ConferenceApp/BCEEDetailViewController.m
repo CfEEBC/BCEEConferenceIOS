@@ -9,7 +9,9 @@
 
 #import "BCEEDetailViewController.h"
 #import "BCEESession.h"
+#import "BCEETimeSlot.h"
 #import "BCEESplashViewController.h"
+#import "BCEESurveyViewController.h"
 
 @interface BCEEDetailViewController ()
 
@@ -112,6 +114,6 @@
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
     // MODIFY WEBSITE HERE
-    //urltosend = @"http://www.google.com";
+     urltosend = [_detailItem surveyLink];
 }
 @end

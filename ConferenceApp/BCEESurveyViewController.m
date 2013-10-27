@@ -9,7 +9,7 @@
 #import "BCEESurveyViewController.h"
 #import "BCEEDetailViewController.h"
 
-NSString * urltosend = @"http://www.google.com/";
+
 
 @interface BCEESurveyViewController ();
 @end

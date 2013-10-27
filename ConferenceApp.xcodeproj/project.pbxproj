@@ -11,6 +11,7 @@
 		A5596786181C71350055E197 /* BCEESplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5596784181C71350055E197 /* BCEESplashViewController.m */; };
 		A5596787181C71350055E197 /* BCEESplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5596785181C71350055E197 /* BCEESplashViewController.xib */; };
 		A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */; };
+		A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */; };
 		B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */; };
 		C93A2C5B181B6B8300AC8EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5A181B6B8300AC8EFC /* Foundation.framework */; };
 		C93A2C5D181B6B8300AC8EFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 		A5596784181C71350055E197 /* BCEESplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESplashViewController.m; sourceTree = "<group>"; };
 		A5596785181C71350055E197 /* BCEESplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCEESplashViewController.xib; sourceTree = "<group>"; };
 		A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BCCFEE_logo_RGB_hires.jpg; sourceTree = "<group>"; };
+		A5E731F9181CAD4700E427FD /* BCEEGeneralSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEEGeneralSurveyViewController.h; sourceTree = "<group>"; };
+		A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEGeneralSurveyViewController.m; sourceTree = "<group>"; };
 		B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEETimeSlot.h; sourceTree = "<group>"; };
 		B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEETimeSlot.m; sourceTree = "<group>"; };
 		C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,8 @@
 				C93A2C73181B6B8300AC8EFC /* BCEEMasterViewController.m */,
 				C93A2C75181B6B8300AC8EFC /* BCEEDetailViewController.h */,
 				C93A2C76181B6B8300AC8EFC /* BCEEDetailViewController.m */,
+				A5E731F9181CAD4700E427FD /* BCEEGeneralSurveyViewController.h */,
+				A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			files = (
 				B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */,
 				A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */,
+				A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */,
 				C93A2C9C181B78E200AC8EFC /* BCEESurvey.m in Sources */,
 				C93A2C67181B6B8300AC8EFC /* main.m in Sources */,
 				C93A2C74181B6B8300AC8EFC /* BCEEMasterViewController.m in Sources */,

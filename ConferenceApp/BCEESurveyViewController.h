@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NSString * urltosend;
 
 @interface BCEESurveyViewController : UIViewController
 

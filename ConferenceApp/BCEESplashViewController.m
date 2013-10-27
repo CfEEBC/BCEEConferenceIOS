@@ -128,7 +128,7 @@
 //        }
 //    }
     
-    NSMutableArray * timeSlots = [[NSMutableArray alloc] init];
+    timeSlots = [[NSMutableArray alloc] init];
     int count = -1;
     NSDate *prevStartDate = Nil;
     for(BCEESession *session in sortedSessions){

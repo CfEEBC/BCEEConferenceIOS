@@ -151,8 +151,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         
         BCEESession *session = [_timeSlots[indexPath.section] sessions][indexPath.row];
-        NSString *sessionName = [session name];
-        self.detailViewController.detailItem = sessionName;
+        self.detailViewController.detailItem = session;
         
     }
 }

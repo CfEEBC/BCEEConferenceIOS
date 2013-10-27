@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BCEESplashViewController.h"
 
+NSMutableArray *timeSlots;
+
 @class BCEEDetailViewController;
 
 @interface BCEEMasterViewController : UITableViewController
