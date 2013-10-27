@@ -18,7 +18,9 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
+    if([urltosend characterAtIndex:0] == 'w'){
+        urltosend = [@"http://" stringByAppendingString:urltosend];
+    }
     NSString * stringUrl = urltosend;
     NSURL *url = [NSURL URLWithString: stringUrl];
     NSURLRequest * rObj = [NSURLRequest requestWithURL: url];
