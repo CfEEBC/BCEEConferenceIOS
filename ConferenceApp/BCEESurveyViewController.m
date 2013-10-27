@@ -19,7 +19,7 @@
     
     // make sure the url starts with http://
     // if not add it in
-    if([urltosend characterAtIndex:0] == 'w'){
+    if(![urltosend hasPrefix:@"http://"] || ![urltosend hasPrefix:@"https://"]){
         urltosend = [@"http://" stringByAppendingString:urltosend];
     }
     
@@ -28,7 +28,7 @@
     NSURLRequest * rObj = [NSURLRequest requestWithURL: url];
     
     // load webpage on the webView
-    NSLog(@"The Survey URL: %@", stringUrl);
+    //NSLog(@"The Survey URL: %@", stringUrl);
     [_surveyWebView loadRequest: rObj];
 }
 @end

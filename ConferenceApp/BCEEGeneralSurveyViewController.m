@@ -26,7 +26,7 @@
 	// Do any additional setup after loading the view.
     
     NSString * parsedlink = @"www.google.com";
-    if([parsedlink characterAtIndex:0] == 'w'){
+    if(![parsedlink hasPrefix:@"http://"] || ![parsedlink hasPrefix:@"https://"]){
         parsedlink = [@"http://" stringByAppendingString:parsedlink];
     }
     NSString * stringUrl = parsedlink;
