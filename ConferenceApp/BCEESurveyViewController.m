@@ -28,7 +28,7 @@
     NSURLRequest * rObj = [NSURLRequest requestWithURL: url];
     
     // load webpage on the webView
-    NSLog(@"The Survey URL: %@", stringUrl);
+    //NSLog(@"The Survey URL: %@", stringUrl);
     [_surveyWebView loadRequest: rObj];
 }
 @end

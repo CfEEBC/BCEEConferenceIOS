@@ -44,8 +44,21 @@
 
 - (void)viewDidLoad
 {
+    // Navigation bar bg
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"navbar_bg.png"]];
+    self.navigationController.navigationBar.backgroundColor = background;
+    
+  //  self.tableView.backgroundColor = [UIColor clearColor];
+  //  self.parentViewController.view.backgroundColor = [UIColor colorWithRed:1.0 green:0.58 blue:0.0 alpha:1.0];
+    
     [super viewDidLoad];
+    
+   // self.parentViewController.view.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
+    
+
     
     self.detailViewController = (BCEEDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
@@ -74,7 +87,8 @@
     BCEESession *session = [_timeSlots[indexPath.section] sessions][indexPath.row];
     NSString *sessionName = [session name];
     cell.textLabel.text = sessionName;
-
+   // cell.textLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+  //  cell.backgroundColor = [UIColor colorWithRed:1.0 green:0.68 blue:0.1 alpha:1.0];
     return cell;
 }
 
@@ -86,8 +100,10 @@
 
 
 - (NSString*)tableView: (UITableView*)tableView titleForHeaderInSection: (NSInteger)section {
-    return [[_timeSlots objectAtIndex: section] timeSlot];
+    return [[_timeSlots objectAtIndex: section]timeSlot] ;
+    
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
