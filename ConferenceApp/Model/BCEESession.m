@@ -10,17 +10,6 @@
 
 @implementation BCEESession
 
-- (id)initWithDate:(NSDate *)startTime
-          location:(NSString *)location
-{
-    if ([super init]) {
-        _startTime = startTime;
-        _location = location;
-        _speakers = @"";
-    }
-    return self;
-}
-
 - (id)initWithName:(NSString *)name
        Description:(NSString *)description
           Location:(NSString *)location

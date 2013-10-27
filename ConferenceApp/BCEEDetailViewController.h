@@ -7,19 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCEETimeSlot.h"
 
 @interface BCEEDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
-@property (strong, nonatomic) IBOutlet UILabel *lblSessionName;
-@property (strong, nonatomic) IBOutlet UILabel *lblName;
-@property (strong, nonatomic) IBOutlet UIButton *btnSurvey;
+@property (strong, nonatomic) BCEESession *detailItem;
+@property (strong, nonatomic) NSString *surveyLink;
+
 @property (strong, nonatomic) IBOutlet UILabel *lbl_sessionName;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_startTime;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_endtime;
+@property (weak, nonatomic) IBOutlet UITextView *description;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_location;
-@property (strong, nonatomic) IBOutlet UITextView *desc_bio;
-
+@property (weak, nonatomic) IBOutlet UILabel *lbl_speakerNames;
+@property (strong, nonatomic) IBOutlet UITextView *biography;
+@property (strong, nonatomic) IBOutlet UIButton *btnSurvey;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 - (IBAction)onSurveyButtonClicked:(id)sender;

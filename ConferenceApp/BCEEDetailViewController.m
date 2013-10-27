@@ -42,10 +42,21 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
     
+    // Set up date formatter
+    NSDateFormatter* df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"MM/dd/yyyy"];
+    
+    // Update the user interface for the detail item.
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
+        self.lbl_sessionName.text = [self.detailItem name];
+        self.lbl_startTime.text = [df stringFromDate:[self.detailItem startTime]];
+        self.lbl_endtime.text = [df stringFromDate:[self.detailItem endTime]];
+        self.description.text = [self.detailItem description];
+        self.lbl_location.text = [self.detailItem location];
+        self.lbl_speakerNames.text = [self.detailItem speakers];
+        self.biography.text = [self.detailItem biography];
     }
     
     // PUT PARSED INFO HERE:

@@ -19,10 +19,6 @@
 @property (nonatomic, strong) NSDate *startTime;
 @property (nonatomic, strong) NSDate *endTime;
 
-
-- (id)initWithDate:(NSDate *)startTime
-          location:(NSString *)location;
-
 - (id)initWithName:(NSString *)name
        Description:(NSString *)description
           Location:(NSString *)location
