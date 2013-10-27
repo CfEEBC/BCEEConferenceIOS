@@ -9,20 +9,16 @@
 
 #import "BCEEDetailViewController.h"
 #import "BCEESession.h"
+#import "BCEESplashViewController.h"
 
 @interface BCEEDetailViewController ()
 
-@property (nonatomic, strong) NSMutableData * responseData;
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
 @implementation BCEEDetailViewController
-
-
-@synthesize responseData = _responseData;
-
 
 
 
@@ -52,11 +48,6 @@
         self.detailDescriptionLabel.text = [self.detailItem description];
     }
     
-    self.responseData = [NSMutableData data];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://bceeconference.appspot.com/machine"]];
-    NSURLConnection * conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [conn start];
-    
     // PUT PARSED INFO HERE:
     //parsedName = @"$SESSION";
     //parsedLocation = @"$LOCATION";
@@ -72,9 +63,6 @@
     
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self.responseData appendData:data];
-}
 
 
 - (void)viewDidLoad
@@ -83,50 +71,6 @@
     
     [self configureView];
     
-    NSLog(@"hey");
-    
-}
-
-- (void) connectionDidFinishLoading:(NSURLConnection *) connection {
-    NSError * myerror = nil;
-    NSArray * res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myerror];
-    
-    for (int i = 0; i < [res count] ; i++){
-        NSDictionary * d = [res objectAtIndex:(0)];
-        for(id key in d){
-            id value = [d objectForKey:key];
-            
-            NSString *keyAsString = (NSString *) key;
-            NSString *valueAsString = (NSString *) value;
-            
-            if([keyAsString isEqualToString:@"session_name"]){
-                parsedName = valueAsString;
-            } else if([keyAsString isEqualToString:@"location"]){
-                parsedLocation = valueAsString;
-            } else if ([keyAsString isEqualToString:@"speakers"]){
-                
-            } else if([keyAsString isEqualToString:@"stime"]){
-                parsedStartTime = valueAsString;
-            } else if([keyAsString isEqualToString:@"etime"]){
-                parsedEndTime = valueAsString;
-            } else if([keyAsString isEqualToString:@"description"]){
-                
-            } else if([keyAsString isEqualToString:@"biography"]){
-                parsedBio = valueAsString;
-            } else if([keyAsString isEqualToString:@"survey_link"]){
-                urltosend = valueAsString;
-            }
-            
-            NSLog(@"===NEW SESSION===");
-            NSLog(@"Name: %@", parsedName);
-            NSLog(@"Location: %@", parsedLocation);
-            NSLog(@"StartTime: %@", parsedStartTime);
-            NSLog(@"EndTime: %@", parsedEndTime);
-            NSLog(@"Biography: %@", parsedBio);
-            NSLog(@"Survey: %@", urltosend);
-        
-        }
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -157,6 +101,6 @@
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
     // MODIFY WEBSITE HERE
-    urltosend = @"http://www.google.com";
+    //urltosend = @"http://www.google.com";
 }
 @end

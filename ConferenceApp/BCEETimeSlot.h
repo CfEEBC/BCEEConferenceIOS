@@ -17,6 +17,8 @@
 - (id)initTimeSlot:(NSString *)timeSlot
       withSessions:(NSMutableArray *) sessions;
 
+- (id)initTimeSlot:(NSString *)timeSlot;
+
 - (void)addSession:(BCEESession *)session;
 
 @end

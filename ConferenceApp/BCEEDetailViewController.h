@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-NSString * urltosend;
-NSString * parsedName;
-NSString * parsedLocation;
-NSString * parsedStartTime;
-NSString * parsedEndTime;
-NSString * parsedBio;
-
 @interface BCEEDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;

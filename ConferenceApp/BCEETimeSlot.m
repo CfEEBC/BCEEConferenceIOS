@@ -20,6 +20,15 @@
     return self;
 }
 
+- (id)initTimeSlot:(NSString *)timeSlot
+{
+    if ([super init]) {
+        _timeSlot = timeSlot;
+        _sessions = [[NSMutableArray alloc] initWithCapacity:10];
+    }
+    return self;
+}
+
 - (void)addSession:(BCEESession *)session
 {
     [_sessions addObject: session];
