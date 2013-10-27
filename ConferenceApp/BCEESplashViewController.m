@@ -48,17 +48,7 @@
 
 - (void) connectionDidFinishLoading:(NSURLConnection *) connection {
     
-    NSString * parsedUrl;
-    NSString * parsedName;
-    NSString * parsedLocation;
-    NSString * parsedStartTime;
-    NSString * parsedEndTime;
-    NSString * parsedBio;
-    NSString * parsedDescription;
-    NSString * parsedSpeakers;
-    NSDate * start_time = [[NSDate alloc] init];
-    NSDate * end_time = [[NSDate alloc] init];
-    
+    // Request Session Information Data from Server, parse it to an array of BCEETimeSlot.
     NSError * myerror = nil;
     NSArray * res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myerror];
     
@@ -66,6 +56,8 @@
     [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 
     for (int i = 0; i < [res count] ; i++){  // loop through each session
+        
+        BCEESession *session = [[BCEESession alloc] init];
         
         NSDictionary * d = [res objectAtIndex:(i)];
 
@@ -76,31 +68,28 @@
             NSString *valueAsString = (NSString *) value;
             
             if([keyAsString isEqualToString:@"session_name"]){
-                parsedName = valueAsString;
+                [session setName:valueAsString];
             } else if([keyAsString isEqualToString:@"location"]){
-                parsedLocation = valueAsString;
+                [session setLocation:valueAsString];
             } else if ([keyAsString isEqualToString:@"speakers"]){
-                parsedSpeakers = valueAsString;
+                [session setSpeakers:valueAsString];
             } else if([keyAsString isEqualToString:@"stime"]){
-                parsedStartTime = valueAsString;
-                start_time = [df dateFromString:parsedStartTime];
-                start_time = [df dateFromString:parsedStartTime];
+                NSDate *start_time = [df dateFromString:valueAsString];
+                [session setStartTime:start_time];
             } else if([keyAsString isEqualToString:@"etime"]){
-                parsedEndTime = valueAsString;
-                end_time = [df dateFromString:parsedEndTime];
+                NSDate *end_time = [df dateFromString:valueAsString];
+                [session setEndTime:end_time];
             } else if([keyAsString isEqualToString:@"description"]){
-                parsedDescription = valueAsString;
+                [session setDescription:valueAsString];
             } else if([keyAsString isEqualToString:@"biography"]){
-                parsedBio = valueAsString;
+                [session setBiography:valueAsString];
             } else if([keyAsString isEqualToString:@"survey_link"]){
-                parsedUrl = valueAsString;
+                [session setSurveyLink:valueAsString];
             }
             
         }
     
-        BCEESession * a = [[BCEESession alloc] initWithName:parsedName
-                                                Description:parsedDescription Location:parsedLocation Speakers:parsedSpeakers Biography:parsedBio surveyLink:parsedUrl startTime:start_time endTime:end_time];
-        [sessionArray addObject:a];
+        [sessionArray addObject:session];
         
     }
     
