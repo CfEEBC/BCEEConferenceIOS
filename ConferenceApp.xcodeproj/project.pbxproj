@@ -16,6 +16,7 @@
 		A584652E181DAC6F00B2144A /* icon_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A584652D181DAC6F00B2144A /* icon_old.png */; };
 		A5846530181DACE600B2144A /* icon_old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A584652F181DACE600B2144A /* icon_old@2x.png */; };
 		A5846532181DAE3B00B2144A /* loadscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5846531181DAE3B00B2144A /* loadscreen.png */; };
+		A584653A181DC86E00B2144A /* btn_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5846539181DC86E00B2144A /* btn_start@2x.png */; };
 		A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */; };
 		A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */; };
 		A5E73206181CD37F00E427FD /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E73203181CD37F00E427FD /* icon_big.png */; };
@@ -64,6 +65,7 @@
 		A584652D181DAC6F00B2144A /* icon_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_old.png; sourceTree = "<group>"; };
 		A584652F181DACE600B2144A /* icon_old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_old@2x.png"; sourceTree = "<group>"; };
 		A5846531181DAE3B00B2144A /* loadscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadscreen.png; sourceTree = "<group>"; };
+		A5846539181DC86E00B2144A /* btn_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_start@2x.png"; sourceTree = "<group>"; };
 		A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BCCFEE_logo_RGB_hires.jpg; sourceTree = "<group>"; };
 		A5E731F9181CAD4700E427FD /* BCEEGeneralSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEEGeneralSurveyViewController.h; sourceTree = "<group>"; };
 		A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEGeneralSurveyViewController.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		C93A2C61181B6B8300AC8EFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A5846539181DC86E00B2144A /* btn_start@2x.png */,
 				A5846531181DAE3B00B2144A /* loadscreen.png */,
 				A584652F181DACE600B2144A /* icon_old@2x.png */,
 				A584652D181DAC6F00B2144A /* icon_old.png */,
@@ -333,6 +336,7 @@
 				A584652C181DA85100B2144A /* btn_start.png in Resources */,
 				A5846532181DAE3B00B2144A /* loadscreen.png in Resources */,
 				C93A2C6E181B6B8300AC8EFC /* Main_iPhone.storyboard in Resources */,
+				A584653A181DC86E00B2144A /* btn_start@2x.png in Resources */,
 				C93A2C65181B6B8300AC8EFC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
