@@ -15,8 +15,10 @@
 @property (strong, nonatomic) NSString *surveyLink;
 
 @property (strong, nonatomic) IBOutlet UILabel *lbl_sessionName;
-@property (strong, nonatomic) IBOutlet UILabel *lbl_startTime;
-@property (strong, nonatomic) IBOutlet UILabel *lbl_endtime;
+//@property (strong, nonatomic) IBOutlet UILabel *lbl_startTime;
+//@property (strong, nonatomic) IBOutlet UILabel *lbl_endtime;
+@property (strong, nonatomic) IBOutlet UILabel *lbl_date;
+//@property (strong, nonatomic) IBOutlet UILabel *lbl_startEndTime;
 @property (weak, nonatomic) IBOutlet UITextView *description;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_location;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_speakerNames;

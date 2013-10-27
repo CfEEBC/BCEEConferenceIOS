@@ -44,14 +44,20 @@
 {
     // Set up date formatter
     NSDateFormatter* df = [[NSDateFormatter alloc]init];
-    [df setDateFormat:@"MM/dd/yyyy"];
+    
+    // Retrieve the date and time of the session
+    [df setDateFormat:@"MMMM d"];
+    NSString *date = [df stringFromDate:[self.detailItem startTime]];
+    [df setDateFormat:@"HH:mm"];
+    NSString *startTime = [df stringFromDate:[self.detailItem startTime]];
+    [df setDateFormat:@"HH:mm"];
+    NSString *endTime = [df stringFromDate:[self.detailItem endTime]];
     
     // Update the user interface for the detail item.
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
         self.lbl_sessionName.text = [self.detailItem name];
-        self.lbl_startTime.text = [df stringFromDate:[self.detailItem startTime]];
-        self.lbl_endtime.text = [df stringFromDate:[self.detailItem endTime]];
+        self.lbl_date.text = [NSString stringWithFormat:@"%@, %@~%@", date, startTime, endTime];
         self.description.text = [self.detailItem description];
         self.lbl_location.text = [self.detailItem location];
         self.lbl_speakerNames.text = [self.detailItem speakers];
