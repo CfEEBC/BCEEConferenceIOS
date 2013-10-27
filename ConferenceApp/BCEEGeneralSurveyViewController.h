@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BCEEGeneralSurveyViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIWebView *generalSurvey;
 
 @end

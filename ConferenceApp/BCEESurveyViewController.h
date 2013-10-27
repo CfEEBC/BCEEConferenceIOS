@@ -14,5 +14,4 @@ NSString * urltosend;
 
 @property (strong, nonatomic) IBOutlet UIWebView *surveyWebView;
 
-
 @end

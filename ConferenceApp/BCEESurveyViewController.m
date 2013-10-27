@@ -9,8 +9,6 @@
 #import "BCEESurveyViewController.h"
 #import "BCEEDetailViewController.h"
 
-
-
 @interface BCEESurveyViewController ();
 @end
 
@@ -18,6 +16,12 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    
+    // make sure the url starts with http://
+    // if not add it in
+    if([urltosend characterAtIndex:0] == 'w'){
+        urltosend = [@"http://" stringByAppendingString:urltosend];
+    }
     
     NSString * stringUrl = urltosend;
     NSURL *url = [NSURL URLWithString: stringUrl];

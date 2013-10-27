@@ -31,8 +31,6 @@
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
-        //_lblName.text = newDetailItem.location;
-        
         // Update the view.
         [self configureView];
     }
@@ -44,7 +42,6 @@
 
 - (void)configureView
 {
-    
     // Set up date formatter
     NSDateFormatter* df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"MM/dd/yyyy"];
@@ -60,20 +57,6 @@
         self.lbl_speakerNames.text = [self.detailItem speakers];
         self.biography.text = [self.detailItem biography];
     }
-    
-    // PUT PARSED INFO HERE:
-    //parsedName = @"$SESSION";
-    //parsedLocation = @"$LOCATION";
-    //parsedStartTime = @"$STIME";
-    //parsedEndTime = @"$ETIME";
-    //parsedBio = @"$BIO";
-    
-//    [_lbl_location setText:parsedLocation];
-//    [_lbl_sessionName setText:parsedName];
-//    [_lbl_startTime setText:parsedStartTime];
-//    [_lbl_endtime setText:parsedEndTime];
-//    [_desc_bio setText:parsedBio];
-    
 }
 
 
@@ -81,7 +64,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self configureView];
     
 }
@@ -113,7 +95,6 @@
 #pragma mark - IBActions
 
 - (IBAction)onSurveyButtonClicked:(id)sender {
-    // MODIFY WEBSITE HERE
      urltosend = [_detailItem surveyLink];
 }
 @end
