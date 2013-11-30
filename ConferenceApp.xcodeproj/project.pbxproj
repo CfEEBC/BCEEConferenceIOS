@@ -76,7 +76,7 @@
 		B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEScheduleConnectionDelegate.m; sourceTree = "<group>"; };
 		B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEETimeSlot.h; sourceTree = "<group>"; };
 		B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEETimeSlot.m; sourceTree = "<group>"; };
-		C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C93A2C57181B6B8300AC8EFC /* CDC 2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CDC 2014.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93A2C5A181B6B8300AC8EFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C93A2C5E181B6B8300AC8EFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -139,7 +139,7 @@
 		C93A2C58181B6B8300AC8EFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */,
+				C93A2C57181B6B8300AC8EFC /* CDC 2014.app */,
 				C93A2C7E181B6B8400AC8EFC /* ConferenceAppTests.xctest */,
 			);
 			name = Products;
@@ -259,7 +259,7 @@
 			);
 			name = ConferenceApp;
 			productName = ConferenceApp;
-			productReference = C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */;
+			productReference = C93A2C57181B6B8300AC8EFC /* CDC 2014.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C93A2C7D181B6B8400AC8EFC /* ConferenceAppTests */ = {
@@ -508,7 +508,7 @@
 				GCC_PREFIX_HEADER = "ConferenceApp/ConferenceApp-Prefix.pch";
 				INFOPLIST_FILE = "ConferenceApp/ConferenceApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CDC 2014";
 				PROVISIONING_PROFILE = "4DA64649-0E96-4C28-8957-5107884B0335";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -526,7 +526,7 @@
 				GCC_PREFIX_HEADER = "ConferenceApp/ConferenceApp-Prefix.pch";
 				INFOPLIST_FILE = "ConferenceApp/ConferenceApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CDC 2014";
 				PROVISIONING_PROFILE = "4DA64649-0E96-4C28-8957-5107884B0335";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
