@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -33,10 +33,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BCCFEE_logo_RGB_hires.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-26-b3V">
-                                <rect key="frame" x="28" y="128" width="264" height="122"/>
+                                <rect key="frame" x="34" y="194" width="251" height="109"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="nUK-fy-pZG"/>
+                                    <constraint firstAttribute="width" constant="251" id="27s-ZE-wJQ"/>
+                                    <constraint firstAttribute="height" constant="109" id="Ahg-M0-WcX"/>
                                 </constraints>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-D2-GRR">
@@ -80,26 +81,36 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CDA_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="NQK-ur-2S1">
+                                <rect key="frame" x="43" y="75" width="234" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="9Ek-sY-s4t"/>
+                                    <constraint firstAttribute="height" constant="111" id="h9t-WO-R2O"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mwk-Ak-3x9" firstAttribute="top" secondItem="0l7-ax-en7" secondAttribute="bottom" constant="80" id="0ag-sa-W0R"/>
                             <constraint firstItem="mwk-Ak-3x9" firstAttribute="top" secondItem="OmC-U6-ruI" secondAttribute="bottom" constant="90" id="BFU-tS-2Qx"/>
                             <constraint firstAttribute="centerX" secondItem="0l7-ax-en7" secondAttribute="centerX" id="Ghe-oL-gBU"/>
+                            <constraint firstItem="NQK-ur-2S1" firstAttribute="top" secondItem="ePY-XU-3Jv" secondAttribute="bottom" constant="11" id="Hxy-vq-owF"/>
+                            <constraint firstAttribute="centerX" secondItem="N3a-26-b3V" secondAttribute="centerX" id="NqH-NZ-nrc"/>
+                            <constraint firstAttribute="centerX" secondItem="NQK-ur-2S1" secondAttribute="centerX" id="STy-Tk-ton"/>
                             <constraint firstItem="0l7-ax-en7" firstAttribute="top" secondItem="bVi-D2-GRR" secondAttribute="bottom" constant="24" id="V5U-Z2-H8M"/>
                             <constraint firstAttribute="centerX" secondItem="bVi-D2-GRR" secondAttribute="centerX" id="d6F-yJ-8I5"/>
+                            <constraint firstItem="N3a-26-b3V" firstAttribute="top" secondItem="NQK-ur-2S1" secondAttribute="bottom" constant="8" id="dUq-9o-LmP"/>
                             <constraint firstAttribute="trailing" secondItem="OmC-U6-ruI" secondAttribute="trailing" constant="24" id="fe8-kt-roW"/>
-                            <constraint firstAttribute="trailing" secondItem="N3a-26-b3V" secondAttribute="trailing" constant="28" id="jRO-we-PdW"/>
-                            <constraint firstItem="N3a-26-b3V" firstAttribute="top" secondItem="ePY-XU-3Jv" secondAttribute="bottom" constant="64" id="s8Z-5s-rAX"/>
                             <constraint firstItem="OmC-U6-ruI" firstAttribute="leading" secondItem="6o3-LR-Pc1" secondAttribute="leading" constant="24" id="t8G-hJ-wZh"/>
-                            <constraint firstItem="N3a-26-b3V" firstAttribute="leading" secondItem="6o3-LR-Pc1" secondAttribute="leading" constant="28" id="url-Kg-aEn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="C5p-HU-69Q"/>
                     <connections>
                         <outlet property="btn_endSurvey" destination="0l7-ax-en7" id="ObW-CZ-JDQ"/>
                         <outlet property="btn_start" destination="bVi-D2-GRR" id="HH5-z4-0rq"/>
-                        <outlet property="img_splash" destination="N3a-26-b3V" id="8dC-Ok-44t"/>
+                        <outlet property="img_splash_cda" destination="NQK-ur-2S1" id="Cgs-e4-Lii"/>
+                        <outlet property="img_splash_cfee" destination="N3a-26-b3V" id="jLz-xg-3my"/>
                         <outlet property="lbl_connectionFailed" destination="OmC-U6-ruI" id="dU4-s1-r6F"/>
                     </connections>
                 </viewController>
@@ -347,6 +358,7 @@
     </scenes>
     <resources>
         <image name="BCCFEE_logo_RGB_hires.jpg" width="1250" height="581"/>
+        <image name="CDA_logo.png" width="2035" height="665"/>
         <image name="btn_start.png" width="150" height="30"/>
         <image name="complete_survey.png" width="150" height="30"/>
     </resources>

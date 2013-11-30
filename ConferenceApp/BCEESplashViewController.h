@@ -19,7 +19,8 @@ id BCEESplashViewInstance;
 
 @interface BCEESplashViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIImageView *img_splash;
+@property (strong, nonatomic) IBOutlet UIImageView *img_splash_cfee;
+@property (strong, nonatomic) IBOutlet UIImageView *img_splash_cda;
 @property (strong, nonatomic) IBOutlet UIButton *btn_start;
 @property (strong, nonatomic) IBOutlet UIButton *btn_endSurvey;
 @property (strong, nonatomic) IBOutlet UILabel *lbl_connectionFailed;
