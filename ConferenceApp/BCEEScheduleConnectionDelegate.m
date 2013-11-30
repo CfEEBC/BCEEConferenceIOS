@@ -26,7 +26,10 @@ NSString* const DATE_FORMAT = @"yyyy-MM-dd HH:mm:ss";
     // also serves to clear it
     _responseData = [[NSMutableData alloc] init];
     _sessionArray = [[NSMutableArray alloc] init];
+    
 }
+
+
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [_responseData appendData:data];
@@ -107,7 +110,8 @@ NSString* const DATE_FORMAT = @"yyyy-MM-dd HH:mm:ss";
             
             // Convert currStartTime to a NSString
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+            // Create the format for the dates shown
+            [formatter setDateFormat:@"EEEE HH:mm"];
             NSString *currStartTimeStr = [formatter stringFromDate:currStartTime];
             
             // Create next time slot

@@ -46,7 +46,7 @@
     NSDateFormatter* df = [[NSDateFormatter alloc]init];
     
     // Retrieve the date and time of the session
-    [df setDateFormat:@"MMMM d"];
+    [df setDateFormat:@"EEEE"];
     NSString *date = [df stringFromDate:[self.detailItem startTime]];
     [df setDateFormat:@"HH:mm"];
     NSString *startTime = [df stringFromDate:[self.detailItem startTime]];
