@@ -2,9 +2,9 @@
 //  BCEESplashViewController.m
 //  ConferenceApp
 //
-//  Created by sNapZ on 10/26/2013.
-//  Copyright (c) 2013 Arianne Dee. All rights reserved.
-//
+//  Created by Napon Taratan on 10/26/2013.
+//  Copyright (c) 2013 Tim Cheung Napon Taratan Arianne Dee.
+//  All rights reserved.
 
 #import "BCEESplashViewController.h"
 #import "BCEEScheduleConnectionDelegate.h"
@@ -65,11 +65,6 @@
         [[segue destinationViewController] setTimeSlots: timeSlots];
     }
 }
-//
-//- (BCEESplashViewController)getInstance
-//{
-//    return instance;
-//}
 
 
 @end
