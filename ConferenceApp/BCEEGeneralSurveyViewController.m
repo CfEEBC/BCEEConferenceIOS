@@ -25,7 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSString * parsedlink = @"www.google.com";
+    NSString * parsedlink = @"https://www.surveymonkey.com/s/LS7TPM7";
     if(![parsedlink hasPrefix:@"http://"] || ![parsedlink hasPrefix:@"https://"]){
         parsedlink = [@"http://" stringByAppendingString:parsedlink];
     }
@@ -33,7 +33,6 @@
     NSURL * url = [NSURL URLWithString:stringUrl];
     NSURLRequest * rObj = [NSURLRequest requestWithURL:url];
     [_generalSurvey loadRequest:rObj];
-    
 }
 
 - (void)didReceiveMemoryWarning
