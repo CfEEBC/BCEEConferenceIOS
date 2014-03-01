@@ -12,10 +12,10 @@
 		A5152F4C181DA6D200E91147 /* complete_survey.png in Resources */ = {isa = PBXBuildFile; fileRef = A5152F4B181DA6D200E91147 /* complete_survey.png */; };
 		A559677D181C5B360055E197 /* BCEESurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A559677C181C5B360055E197 /* BCEESurveyViewController.m */; };
 		A5596786181C71350055E197 /* BCEESplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5596784181C71350055E197 /* BCEESplashViewController.m */; };
+		A56D268A184A986B000F9BB6 /* complete_survey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A56D2689184A986B000F9BB6 /* complete_survey@2x.png */; };
 		A584652C181DA85100B2144A /* btn_start.png in Resources */ = {isa = PBXBuildFile; fileRef = A584652B181DA85100B2144A /* btn_start.png */; };
 		A584652E181DAC6F00B2144A /* icon_old.png in Resources */ = {isa = PBXBuildFile; fileRef = A584652D181DAC6F00B2144A /* icon_old.png */; };
 		A5846530181DACE600B2144A /* icon_old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A584652F181DACE600B2144A /* icon_old@2x.png */; };
-		A5846532181DAE3B00B2144A /* loadscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A5846531181DAE3B00B2144A /* loadscreen.png */; };
 		A584653A181DC86E00B2144A /* btn_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5846539181DC86E00B2144A /* btn_start@2x.png */; };
 		A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */; };
 		A5E731FB181CAD4700E427FD /* BCEEGeneralSurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E731FA181CAD4700E427FD /* BCEEGeneralSurveyViewController.m */; };
@@ -24,6 +24,7 @@
 		A5E73208181CD37F00E427FD /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = A5E73205181CD37F00E427FD /* icon_small.png */; };
 		B631C3D4181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */; };
 		B682E4BA181C417400B42FA2 /* BCEETimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */; };
+		B68C9BA4184A8635008B22AC /* CDA_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B68C9BA3184A8635008B22AC /* CDA_logo.png */; };
 		C93A2C5B181B6B8300AC8EFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5A181B6B8300AC8EFC /* Foundation.framework */; };
 		C93A2C5D181B6B8300AC8EFC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */; };
 		C93A2C5F181B6B8300AC8EFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A2C5E181B6B8300AC8EFC /* UIKit.framework */; };
@@ -61,10 +62,10 @@
 		A559677C181C5B360055E197 /* BCEESurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESurveyViewController.m; sourceTree = "<group>"; };
 		A5596783181C71350055E197 /* BCEESplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEESplashViewController.h; sourceTree = "<group>"; };
 		A5596784181C71350055E197 /* BCEESplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEESplashViewController.m; sourceTree = "<group>"; };
+		A56D2689184A986B000F9BB6 /* complete_survey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "complete_survey@2x.png"; sourceTree = "<group>"; };
 		A584652B181DA85100B2144A /* btn_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_start.png; sourceTree = "<group>"; };
 		A584652D181DAC6F00B2144A /* icon_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_old.png; sourceTree = "<group>"; };
 		A584652F181DACE600B2144A /* icon_old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_old@2x.png"; sourceTree = "<group>"; };
-		A5846531181DAE3B00B2144A /* loadscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadscreen.png; sourceTree = "<group>"; };
 		A5846539181DC86E00B2144A /* btn_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_start@2x.png"; sourceTree = "<group>"; };
 		A5A5CA2F181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BCCFEE_logo_RGB_hires.jpg; sourceTree = "<group>"; };
 		A5E731F9181CAD4700E427FD /* BCEEGeneralSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEEGeneralSurveyViewController.h; sourceTree = "<group>"; };
@@ -76,7 +77,8 @@
 		B631C3D3181DA69B004D33DA /* BCEEScheduleConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEEScheduleConnectionDelegate.m; sourceTree = "<group>"; };
 		B682E4B8181C417400B42FA2 /* BCEETimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCEETimeSlot.h; sourceTree = "<group>"; };
 		B682E4B9181C417400B42FA2 /* BCEETimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCEETimeSlot.m; sourceTree = "<group>"; };
-		C93A2C57181B6B8300AC8EFC /* CDC 2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CDC 2014.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68C9BA3184A8635008B22AC /* CDA_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CDA_logo.png; sourceTree = "<group>"; };
+		C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93A2C5A181B6B8300AC8EFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C93A2C5C181B6B8300AC8EFC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C93A2C5E181B6B8300AC8EFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -139,7 +141,7 @@
 		C93A2C58181B6B8300AC8EFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C93A2C57181B6B8300AC8EFC /* CDC 2014.app */,
+				C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */,
 				C93A2C7E181B6B8400AC8EFC /* ConferenceAppTests.xctest */,
 			);
 			name = Products;
@@ -176,8 +178,9 @@
 		C93A2C61181B6B8300AC8EFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A56D2689184A986B000F9BB6 /* complete_survey@2x.png */,
+				B68C9BA3184A8635008B22AC /* CDA_logo.png */,
 				A5846539181DC86E00B2144A /* btn_start@2x.png */,
-				A5846531181DAE3B00B2144A /* loadscreen.png */,
 				A584652F181DACE600B2144A /* icon_old@2x.png */,
 				A584652D181DAC6F00B2144A /* icon_old.png */,
 				A584652B181DA85100B2144A /* btn_start.png */,
@@ -259,7 +262,7 @@
 			);
 			name = ConferenceApp;
 			productName = ConferenceApp;
-			productReference = C93A2C57181B6B8300AC8EFC /* CDC 2014.app */;
+			productReference = C93A2C57181B6B8300AC8EFC /* ConferenceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C93A2C7D181B6B8400AC8EFC /* ConferenceAppTests */ = {
@@ -323,7 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5A5CA30181C74B200118C97 /* BCCFEE_logo_RGB_hires.jpg in Resources */,
+				A56D268A184A986B000F9BB6 /* complete_survey@2x.png in Resources */,
 				A5E73206181CD37F00E427FD /* icon_big.png in Resources */,
+				B68C9BA4184A8635008B22AC /* CDA_logo.png in Resources */,
 				A5E73208181CD37F00E427FD /* icon_small.png in Resources */,
 				A5152F4C181DA6D200E91147 /* complete_survey.png in Resources */,
 				A584652E181DAC6F00B2144A /* icon_old.png in Resources */,
@@ -334,7 +339,6 @@
 				A5152F49181D8B9400E91147 /* navbar_bg.png in Resources */,
 				C93A2C79181B6B8300AC8EFC /* Images.xcassets in Resources */,
 				A584652C181DA85100B2144A /* btn_start.png in Resources */,
-				A5846532181DAE3B00B2144A /* loadscreen.png in Resources */,
 				C93A2C6E181B6B8300AC8EFC /* Main_iPhone.storyboard in Resources */,
 				A584653A181DC86E00B2144A /* btn_start@2x.png in Resources */,
 				C93A2C65181B6B8300AC8EFC /* InfoPlist.strings in Resources */,
@@ -501,15 +505,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConferenceApp/ConferenceApp-Prefix.pch";
 				INFOPLIST_FILE = "ConferenceApp/ConferenceApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "CDC 2014";
-				PROVISIONING_PROFILE = "4DA64649-0E96-4C28-8957-5107884B0335";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -519,15 +523,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConferenceApp/ConferenceApp-Prefix.pch";
 				INFOPLIST_FILE = "ConferenceApp/ConferenceApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "CDC 2014";
-				PROVISIONING_PROFILE = "4DA64649-0E96-4C28-8957-5107884B0335";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
