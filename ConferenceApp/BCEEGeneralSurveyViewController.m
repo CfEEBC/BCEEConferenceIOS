@@ -25,12 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSString * parsedlink = @"https://www.surveymonkey.com/s/LS7TPM7";
-    if(![parsedlink hasPrefix:@"http://"] || ![parsedlink hasPrefix:@"https://"]){
-        parsedlink = [@"http://" stringByAppendingString:parsedlink];
-    }
-    NSString * stringUrl = parsedlink;
-    NSURL * url = [NSURL URLWithString:stringUrl];
+    NSURL * url = [NSURL URLWithString: @"https://www.surveymonkey.com/s/LS7TPM7"];
     NSURLRequest * rObj = [NSURLRequest requestWithURL:url];
     [_generalSurvey loadRequest:rObj];
 }
